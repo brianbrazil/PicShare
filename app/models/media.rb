@@ -1,5 +1,6 @@
 class Media
   include Mongoid::Document
+  belongs_to :event
 
   field :md5
   field :caption
