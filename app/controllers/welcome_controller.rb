@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @events = Event.find
+    @events = Event.all
   end
 end
