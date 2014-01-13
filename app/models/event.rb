@@ -1,5 +1,6 @@
 class Event
-  has_many :medias
   include Mongoid::Document
+  has_many :medias
+
   field :name, type: String
 end
