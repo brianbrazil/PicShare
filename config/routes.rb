@@ -1,4 +1,5 @@
 PicShare::Application.routes.draw do
+  get "welcome/index"
   resources :events
 
   resources :photos
