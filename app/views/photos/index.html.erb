@@ -3,7 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>Uuid</th>
       <th>Md5</th>
       <th>Caption</th>
       <th>Adult content</th>
@@ -17,7 +16,6 @@
   <tbody>
     <% @photos.each do |photo| %>
       <tr>
-        <td><%= photo.uuid %></td>
         <td><%= photo.md5 %></td>
         <td><%= photo.caption %></td>
         <td><%= photo.adult_content %></td>
