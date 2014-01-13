@@ -6,7 +6,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.2'
 
 # Use mongoid as the database for Active Record
-gem 'mongoid'
+gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
 # Use SCSS for stylesheets
