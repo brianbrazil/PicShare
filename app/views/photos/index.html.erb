@@ -6,7 +6,7 @@
       <th>Md5</th>
       <th>Caption</th>
       <th>Adult content</th>
-      <th>Url</th>
+      <th>Media URL</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,7 +19,7 @@
         <td><%= photo.md5 %></td>
         <td><%= photo.caption %></td>
         <td><%= photo.adult_content %></td>
-        <td><%= photo.url %></td>
+        <td><%= photo.media_url %></td>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
