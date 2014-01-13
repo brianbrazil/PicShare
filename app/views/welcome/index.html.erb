@@ -3,6 +3,6 @@
 <h2>Choose an event:</h2>
 <ul>
   <% @events.each do |event| %>
-      <li><%= event.name %></li>
+      <li><%=event.name%> (<%=event.id%>)</li>
   <% end %>
 </ul>
