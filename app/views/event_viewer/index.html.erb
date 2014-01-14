@@ -1,4 +1,4 @@
 <h1><%= @event.name %></h1>
-<% @images.each do |image| %>
+<% @images.shuffle.each do |image| %>
     <%= image_tag image %>
 <% end %>
