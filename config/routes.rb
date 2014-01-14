@@ -1,7 +1,6 @@
 PicShare::Application.routes.draw do
   get "event_creator/index"
   post "event_creator/create"
-  get "event_viewer/index"
   get "welcome/index"
 
   resources :events
