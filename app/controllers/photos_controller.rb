@@ -41,9 +41,7 @@ class PhotosController < ApplicationController
   # PATCH/PUT /photos/1.json
   def update
     respond_to do |format|
-      p = photo_params
-      p[:event_id] = '52d4752d6164390002000000'
-      if @photo.update(p)
+      if @photo.update(photo_params)
         format.html { redirect_to @photo, notice: 'Photo was successfully updated.' }
         format.json { head :no_content }
       else
@@ -71,6 +69,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:md5, :caption, :adult_content, :media_url)
+      params.require(:photo).permit(:md5, :caption, :adult_content, :media_url, :event_id)
     end
 end
