@@ -1,9 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<h1><%= @event.name %></h1>
+<% @event.medias.shuffle.each do |image| %>
+    <%= image_tag media_url, width: 480 %>
+<% end %>
