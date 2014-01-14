@@ -41,7 +41,9 @@ class PhotosController < ApplicationController
   # PATCH/PUT /photos/1.json
   def update
     respond_to do |format|
-      if @photo.update(photo_params)
+      p = photo_params
+      p[:event_id] = '52d4752d6164390002000000'
+      if @photo.update(p)
         format.html { redirect_to @photo, notice: 'Photo was successfully updated.' }
         format.json { head :no_content }
       else
