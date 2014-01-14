@@ -19,6 +19,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/1/edit
   def edit
+    @events = Event.all
   end
 
   # POST /photos

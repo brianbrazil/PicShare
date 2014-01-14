@@ -29,7 +29,7 @@
   </div>
     <div class="field">
       <%= f.label :event_id %><br>
-      <%= f.text_field :event_id %>
+      <%= f.select :event_id, @events.map { |event| [event.name, event.id] } %>
     </div>
   <div class="actions">
     <%= f.submit %>
