@@ -1,9 +1,9 @@
 <h1>Welcome to PicShare</h1>
-<h2><%= link_to 'Create new event', :controller => 'event_creator', :action => 'index' %></h2>
+<h2><%= link_to 'Create new event', controller: 'event_creator', action: 'index' %></h2>
 <h2>or</h2>
 <h2>Choose an event:</h2>
 <ul>
   <% @events.each do |event| %>
-      <li><%= link_to event.name, :controller => "event_viewer", :action => "index", :id => event.id %></li>
+      <li><%= link_to event.name, controller: "event_viewer", action: "index", id: event.id %></li>
   <% end %>
 </ul>
