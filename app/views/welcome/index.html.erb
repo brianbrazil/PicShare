@@ -4,6 +4,6 @@
 <h2>Choose an event:</h2>
 <ul>
   <% @events.each do |event| %>
-      <li><%= link_to event.name, controller: "event_viewer", action: "index", id: event.id %></li>
+      <li><%= link_to event.name, controller: "events", action: "show", id: event.id %></li>
   <% end %>
 </ul>
