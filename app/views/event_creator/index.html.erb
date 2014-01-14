@@ -1,6 +1,6 @@
 <h1>Create an event</h1>
 
-<%= form_for @event, url: { controller: event_creator } do |f| %>
+<%= form_for @event, url: { controller: 'event_creator' } do |f| %>
     <% if @event.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
