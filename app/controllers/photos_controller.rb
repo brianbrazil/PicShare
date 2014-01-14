@@ -15,7 +15,7 @@ class PhotosController < ApplicationController
   # GET /photos/new
   def new
     @photo = Photo.new
-    @event_id = params[:event_id]
+    @photo.event_id = params[:event_id]
   end
 
   # GET /photos/1/edit
