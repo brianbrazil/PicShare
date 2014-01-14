@@ -1,4 +1,7 @@
 <h1><%= @event.name %></h1>
+
+<h2><%= link_to 'Upload', url: { controller: 'photos', action: 'new' } %></h2>
+
 <% @event.medias.shuffle.each do |image| %>
     <%= image_tag image.media_url, width: 480 %>
 <% end %>
