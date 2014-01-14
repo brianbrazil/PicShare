@@ -15,6 +15,7 @@ class PhotosController < ApplicationController
   # GET /photos/new
   def new
     @photo = Photo.new
+    @events = Event.all
   end
 
   # GET /photos/1/edit
