@@ -1,7 +1,7 @@
 development:
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: mongodb://development:picshare@alex.mongohq.com:10034/picshare-development
 
 production:
   sessions:
