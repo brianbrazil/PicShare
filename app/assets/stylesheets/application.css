@@ -11,12 +11,3 @@
  *= require_self
  *= require_tree .
  */
-
-#navbar {
-    background: #44474B;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 99999;
-}
