@@ -1,8 +1,13 @@
-<div class="button"><%= link_to 'Create a new event', { controller: 'events', action: 'new' }, class: 'button' %></div>
-<h2>or</h2>
-<h2>Choose an event:</h2>
-<ul>
-  <% @events.each do |event| %>
-      <li><%= link_to event.name, { controller: "events", action: "show", id: event.id } %></li>
-  <% end %>
-</ul>
+<div style="margin-top:100px;">
+
+    <div class="button">
+        <%= form_tag url_for(controller: 'events', action: 'show'), method: 'get' do %>
+            <%= select_tag :id, options_for_select(@events.collect { |event| [event.name, event.id] }), prompt: 'Choose an Event', onchange: 'this.form.submit()' %>
+        <% end %>
+      </div>
+
+      <p class="or">-or-</p>
+
+      <div class="button"><%= link_to 'Create a new event', { controller: 'events', action: 'new' }, class: 'button' %></div>
+
+</div>
