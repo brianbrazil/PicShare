@@ -1,0 +1,21 @@
+= form_for(@photo) do |f|
+  - if @photo.errors.any?
+    .error_explanation
+      %h2 #{pluralize(@photo.errors.count, "error")} prohibited this photo from being saved:
+      %ul
+        - @photo.errors.full_messages.each do |msg|
+          %li msg
+
+  .field
+    = f.label :caption
+    = f.text_field :caption
+  .field
+    = f.label :adult_content
+    = f.check_box :adult_content
+  .field
+    = f.label :media_url
+    = f.text_field :media_url
+  .field
+    = f.hidden_field :event_id
+  .actions
+    = f.submit
