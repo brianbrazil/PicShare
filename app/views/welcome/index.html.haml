@@ -1,0 +1,10 @@
+%div{style: "margin-top:100px;"}
+
+  .button
+    = form_tag url_for(controller: 'events', action: 'show'), method: 'get' do
+      = select_tag :id, options_for_select(@events.collect { |event| [event.name, event.id] }), prompt: 'Choose an Event', onchange: 'this.form.submit()'
+
+  %p.or -or-
+
+  .button
+    = link_to 'Create a new event', { controller: 'events', action: 'new' }, class: 'button'
