@@ -6,9 +6,29 @@
     = stylesheet_link_tag params[:controller], media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
 
-%body
-  #navbar
-    = link_to 'PicShare', controller: 'welcome', action: 'index'
+  %body{style: "padding-top:70px"}
 
-  = yield
+    .navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+      .container
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          =link_to "PicShare", {controller: "welcome", action: 'index'}, class: "navbar-brand"
+
+        .navbar-collapse.collapse
+          %ul.nav.navbar-nav
+            %li.active
+              =link_to "Home", {controller: "welcome", action: 'index'}
+            %li
+              %a{:href => "#about"} About
+            %li
+          %ul.nav.navbar-nav.navbar-right
+            %li.hidden
+              =link_to "Login", {controller: "welcome", action: 'index'}
+
+    = yield

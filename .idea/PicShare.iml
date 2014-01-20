@@ -167,6 +167,7 @@
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.0.2, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.5, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="haml-rails (v0.5.3, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.9, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v1.5.3, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />

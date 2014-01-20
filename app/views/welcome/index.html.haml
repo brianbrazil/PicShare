@@ -1,10 +1,15 @@
-%div{style: "margin-top:100px;"}
 
-  .button
-    = form_tag url_for(controller: 'events', action: 'show'), method: 'get' do
-      = select_tag :id, options_for_select(@events.collect { |event| [event.name, event.id] }), prompt: 'Choose an Event', onchange: 'this.form.submit()'
-
-  %p.or -or-
-
-  .button
-    = link_to 'Create a new event', { controller: 'events', action: 'new' }
+.container
+  .jumbotron
+    %h1 Welcome to PicShare
+    %p PicShare is a place to share your event photos with friends, family, and the world!
+    %p There should be more text here. But there isn't.
+    .btn-group
+      %a.btn.btn-lg.btn-primary.dropdown-toggle{ "data-toggle" => 'dropdown'}
+        Find a recent event
+        %span.caret
+      %ul.dropdown-menu
+        - @events.each do |event|
+          %li #{ link_to event.name, {controller: 'events', action: 'show', id: event.id} }
+    &nbsp;&nbsp; or &nbsp;&nbsp;
+    =link_to "Create a new event", {controller: "events", action: "new"}, class: 'btn btn-lg btn-primary'
