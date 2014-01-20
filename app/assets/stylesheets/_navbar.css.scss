@@ -1,0 +1,15 @@
+body {
+  padding-top:70px
+}
+
+.navbar-default {
+  background-color: #3c7cc0;
+  border-color: blue;
+  .navbar-brand {
+    color: white;
+    &:hover { color: black; }
+  }
+  .navbar-nav > li > a {
+    color: white;
+  }
+}
