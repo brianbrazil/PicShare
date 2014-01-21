@@ -2,6 +2,8 @@ PicShare::Application.routes.draw do
   get "welcome/index"
   get "events/show"
 
+  post "photos/upload"
+
   resources :events
   resources :photos
 

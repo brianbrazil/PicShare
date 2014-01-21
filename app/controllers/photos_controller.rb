@@ -63,6 +63,14 @@ class PhotosController < ApplicationController
     end
   end
 
+  def upload
+    @photos = []
+    files = params[:files]
+    files.each do |file|
+        @photos << { name: file.original_filename }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_photo
