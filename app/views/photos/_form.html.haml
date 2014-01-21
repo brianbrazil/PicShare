@@ -1,4 +1,7 @@
-%input#fileupload{type: "file", name: "files[]", 'data-url' => "/photos", multiple: true}
+%span.fileinput-button.btn.btn-primary.btn-sm
+  %i.glyphicon.glyphicon-plus
+  %span Select Files...
+  %input#fileupload{type: "file", name: "files[]", 'data-url' => "/photos", multiple: true}
 #progress
   .bar{style: "width:00%;"}
 
