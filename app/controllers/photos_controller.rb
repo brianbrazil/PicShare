@@ -1,3 +1,5 @@
+#require 'aws/s3'
+
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
@@ -64,6 +66,9 @@ class PhotosController < ApplicationController
   end
 
   def upload
+    s3 = AWS::S3.new(access_key_id: 'AKIAIEI5ZVZM4HFZ6ONA', secret_access_key: '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')
+    bucket = s3.buckets['PicShare']
+    obj =
     @photos = []
     files = params[:files]
     files.each do |file|
