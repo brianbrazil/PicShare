@@ -4,6 +4,7 @@
   %thead
     %tr
       %th Thumbnail
+      %th Event
       %th Caption
       %th MD5
       %th Adult content
@@ -15,6 +16,7 @@
     - @photos.each do |photo|
       %tr
         %td #{ image_tag photo.media_url, width: 64, height: 64 }
+        %td #{ photo.event.name }
         %td #{ photo.caption }
         %td #{ photo.md5 }
         %td #{ photo.adult_content }
