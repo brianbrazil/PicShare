@@ -1,1 +1,1 @@
-#= require _uploader
+#= require uploader
