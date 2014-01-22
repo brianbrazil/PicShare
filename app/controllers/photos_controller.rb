@@ -1,5 +1,3 @@
-#require 'aws/s3'
-
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
