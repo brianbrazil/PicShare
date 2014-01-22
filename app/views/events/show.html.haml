@@ -1,6 +1,6 @@
 %h1 #{ @event.name }
 
-%h2 #{ link_to 'Upload Photos', controller: 'photos', action: 'new', event_id: @event.id }
+=render 'layouts/form'
 
 - @event.medias.shuffle.each do |image|
   = image_tag image.media_url, width: 480
