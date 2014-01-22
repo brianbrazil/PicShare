@@ -1,7 +1,7 @@
 .container
   %h1 #{ @event.name }
 
-  =render 'layouts/form'
+  =render 'layouts/uploader'
 
   - @event.medias.shuffle.each do |image|
     = image_tag image.media_url, width: 480
