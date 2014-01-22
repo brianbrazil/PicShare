@@ -1,1 +1,1 @@
-#= require _uploader.js.coffee
+#= require _uploader
