@@ -1,6 +1,7 @@
-%h1 #{ @event.name }
+.container
+  %h1 #{ @event.name }
 
-=render 'layouts/form'
+  =render 'layouts/form'
 
-- @event.medias.shuffle.each do |image|
-  = image_tag image.media_url, width: 480
+  - @event.medias.shuffle.each do |image|
+    = image_tag image.media_url, width: 480
