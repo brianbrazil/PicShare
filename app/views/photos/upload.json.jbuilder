@@ -1,3 +1,3 @@
-json.array!(@photos) do |photo|
-  json.extract! photo, :name
+json.array!(@files) do |file|
+  json.extract! file, :name
 end
