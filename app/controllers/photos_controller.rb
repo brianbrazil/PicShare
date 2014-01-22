@@ -68,11 +68,8 @@ class PhotosController < ApplicationController
 
   def upload
     @files = []
-    s3 = AWS::S3.new(access_key_id: 'AKIAIEI5ZVZM4HFZ6ONA', secret_access_key: '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')
     params[:files].each do |file|
-      obj = AWS::S3::S3Object.new(s3.buckets['PicShare'], SecureRandom.uuid)
-      obj.write(file.tempfile)
-      Photo.new({event_id: params[:event_id], media_url: obj.url_for(:read) }).save
+      Photo.new({event_id: params[:event_id], media_file: file.tempfile }).save
       @files << { name: file.original_filename }
     end
   end
