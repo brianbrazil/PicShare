@@ -16,6 +16,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
+    @event = Event.find(params[:event_id])
     @photo = Photo.new
     @photo.event_id = params[:event_id]
   end
@@ -66,13 +67,13 @@ class PhotosController < ApplicationController
   end
 
   def upload
-    s3 = AWS::S3.new(access_key_id: 'AKIAIEI5ZVZM4HFZ6ONA', secret_access_key: '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')
-    bucket = s3.buckets['PicShare']
-    obj =
     @photos = []
-    files = params[:files]
-    files.each do |file|
-        @photos << { name: file.original_filename }
+    s3 = AWS::S3.new(access_key_id: 'AKIAIEI5ZVZM4HFZ6ONA', secret_access_key: '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')
+    params[:files].each do |file|
+      obj = AWS::S3::S3Object.new(s3.buckets['PicShare'], SecureRandom.uuid)
+      obj.write(file.tempfile)
+      Photo.new({event_id: params[:event_id], media_url: obj.url_for(:read) }).save
+      @photos << { name: file.original_filename }
     end
   end
 
