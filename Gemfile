@@ -23,6 +23,7 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'google-analytics-rails'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

@@ -7,6 +7,7 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    -analytics_init if Rails.env.production?
 
   %body
     = render "/layouts/navbar"
