@@ -1,3 +1,4 @@
 #= require _uploader
 
-$('.datepicker').datepicker()
+$('.datepicker').datepicker
+  dateFormat: 'DD, d MM, yy'
