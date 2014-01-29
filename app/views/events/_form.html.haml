@@ -1,5 +1,5 @@
 
-= form_for(@event) do |f|
+= form_for(@event, html: {class: 'form-horizontal'}) do |f|
   = if @event.errors.any?
     #error_explanation
       %h2
@@ -8,17 +8,17 @@
           - @event.errors.full_messages.each do |msg|
             %li msg
 
-  .field
-    = f.label :name
-    = f.text_field :name
+  .form-group.row
+    = f.label :name, class: 'control-label'
+    = f.text_field :name, class: 'form-control'
 
-  .field
-    = f.label :startDate, "Start Date"
-    = f.text_field :startDate, class: "datepicker"
+  .form-group
+    = f.label :startDate, "Start Date", class: 'control-label'
+    = f.text_field :startDate, class: "datepicker form-control"
 
-  .field
-    = f.label :endDate, "End Date"
-    = f.text_field :endDate, class: "datepicker"
+  .form-group
+    = f.label :endDate, "End Date", class: 'control-label'
+    = f.text_field :endDate, class: "datepicker form-control"
 
-  .actions
+  .form-group.row
     = f.submit class: 'btn btn-primary'
