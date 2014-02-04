@@ -3,5 +3,6 @@
 
   =render 'layouts/uploader'
 
-  - @event.medias.shuffle.each do |image|
-    = image_tag image.media_url, width: 480
+  .gridalicious
+    - @event.medias.shuffle.each do |image|
+      = image_tag image.media_url, width: 240
