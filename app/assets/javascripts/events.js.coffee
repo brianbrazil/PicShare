@@ -1,5 +1,6 @@
 #= require _uploader
 #= require jquery.grid-a-licious
+#= require colorbox-rails
 
 $('.datepicker').datepicker
   dateFormat: 'DD, d MM, yy'
@@ -7,8 +8,8 @@ $('.datepicker').datepicker
     $('#event_endDate').datepicker('option', 'minDate', selectedDate)
     $('#event_startDate').datepicker('option', 'maxDate', selectedDate)
 
-$('.gridalicious').gridalicious
-  selector: 'img'
-  animate: true
-  width: 240
-  gutter: 2
+#$('.gridalicious').gridalicious
+#  selector: 'img'
+#  animate: true
+#  width: 240
+#  gutter: 2

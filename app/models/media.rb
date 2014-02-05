@@ -17,7 +17,9 @@ class Media
   def media_url
     s3 = AWS::S3.new(access_key_id: ENV['PICSHARE_AWS_ID'], secret_access_key: ENV['PICSHARE_AWS_SECRET'])
     obj = s3.buckets['PicShare'].objects[self._s3_filename]
-    obj.url_for(:read)
+    #obj.url_for(:read)
+    p obj.public_url
+    obj.public_url
   end
 
   field :_s3_filename, type: String
