@@ -43,7 +43,6 @@ class Media
 
   field :_s3_filename, type: String
 
-
   def s3
     AWS::S3.new(access_key_id: ENV['PICSHARE_AWS_ID'], secret_access_key: ENV['PICSHARE_AWS_SECRET'])
   end
