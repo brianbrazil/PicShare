@@ -16,6 +16,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'aws-sdk'
+gem 'rmagick'
 
 group :doc do
   gem 'sdoc', require: false
