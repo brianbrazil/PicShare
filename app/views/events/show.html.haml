@@ -5,6 +5,6 @@
 
   .gridalicious
     - @event.medias.shuffle.each do |image|
-      <a href="#{image.media_url}" data-colorbox=true data-colorbox-photo=true>
+      <a href="#{image.media_url}" class="gridItem" data-colorbox=true data-colorbox-photo=true data-colorbox-max-width="window.innerWidth()">
       = image_tag image.media_url, width: 240
       </a>

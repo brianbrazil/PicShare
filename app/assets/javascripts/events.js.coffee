@@ -9,7 +9,7 @@ $('.datepicker').datepicker
     $('#event_startDate').datepicker('option', 'maxDate', selectedDate)
 
 #$('.gridalicious').gridalicious
-#  selector: 'img'
+#  selector: '.gridItem'
 #  animate: true
 #  width: 240
 #  gutter: 2
