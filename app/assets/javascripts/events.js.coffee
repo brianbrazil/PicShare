@@ -8,8 +8,8 @@ $('.datepicker').datepicker
     $('#event_endDate').datepicker('option', 'minDate', selectedDate)
     $('#event_startDate').datepicker('option', 'maxDate', selectedDate)
 
-#$('.gridalicious').gridalicious
-#  selector: '.gridItem'
-#  animate: true
-#  width: 240
-#  gutter: 2
+$('.gridalicious').gridalicious
+  selector: '.gridItem'
+  animate: true
+  width: 240
+  gutter: 2
