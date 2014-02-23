@@ -18,7 +18,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'colorbox-rails'
 
 gem 'aws-sdk'
-gem 'rmagick'
+gem 'rmagick', require: 'RMagick'
 
 group :doc do
   gem 'sdoc', require: false
