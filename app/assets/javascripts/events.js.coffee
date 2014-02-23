@@ -12,4 +12,4 @@ $('.gridalicious').gridalicious
   selector: '.gridItem'
   animate: true
   width: 240
-  gutter: 2
+  gutter: 3
