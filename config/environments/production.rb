@@ -77,4 +77,6 @@ PicShare::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.mongoid.preload_models = false
 end
