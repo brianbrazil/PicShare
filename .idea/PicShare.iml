@@ -164,6 +164,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mongoid (v4.0.0.alpha2@999a40, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="moped (v2.0.0.beta5, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.8.4, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="newrelic_rpm (v3.7.2.195, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.1, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="optionable (v0.2.0, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="origin (v2.1.0, RVM: ruby-2.0.0-p353 [global]) [gem]" level="application" />

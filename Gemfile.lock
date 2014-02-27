@@ -87,6 +87,7 @@ GEM
       connection_pool (~> 1.2)
       optionable (~> 0.2.0)
     multi_json (1.8.4)
+    newrelic_rpm (3.7.2.195)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     optionable (0.2.0)
@@ -167,6 +168,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   mongoid!
+  newrelic_rpm
   rails (= 4.0.2)
   rails_12factor
   rmagick
