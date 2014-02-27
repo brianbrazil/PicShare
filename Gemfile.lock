@@ -169,7 +169,7 @@ DEPENDENCIES
   jquery-ui-rails
   mongoid!
   newrelic_rpm
-  rails (= 4.0.2)
+  rails (~> 4.0.0)
   rails_12factor
   rmagick
   sass-rails (~> 4.0.0)
