@@ -1,7 +1,7 @@
 .container
   h1 #{ @event.name }
 
-  == render 'layouts/uploader'
+  == render partial: 'layouts/uploader'
 
   .gridalicious
     - @event.medias.shuffle.each do |image|
