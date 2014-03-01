@@ -6,7 +6,6 @@ gem 'rails', '~> 4.0.3'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
-gem 'haml-rails'
 gem 'slim'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
