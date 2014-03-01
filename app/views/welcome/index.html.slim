@@ -1,0 +1,15 @@
+
+.container
+  .jumbotron
+    h1 Welcome to PicShare
+    p PicShare is a place to share your event photos with friends, family, and the world!
+    p There should be more text here. But there isn't.
+    .btn-group
+      a.btn.btn-lg.btn-primary.dropdown-toggle data-toggle='dropdown'
+        | Find a recent event
+        span.caret
+      ul.dropdown-menu
+        - @events.each do |event|
+          li #{ link_to event.name, {controller: 'events', action: 'show', id: event.id} }
+    | &nbsp;&nbsp; or &nbsp;&nbsp;
+    =link_to "Create a new event", {controller: "events", action: "new"}, class: 'btn btn-lg btn-primary'
