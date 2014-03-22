@@ -1,6 +1,8 @@
 class Media
   include Mongoid::Document
   include Magick
+  include PicShareS3
+
   belongs_to :event
 
   field :md5
@@ -8,9 +10,7 @@ class Media
   field :adult_content, type: Mongoid::Boolean
 
   def media_file=(file)
-    self._s3_filename = SecureRandom.uuid
-    obj = AWS::S3::S3Object.new(bucket, self._s3_filename)
-    obj.write(file)
+    Uploader.new.async.perform file: file, photo_id: id
   end
 
   def media_url
@@ -23,24 +23,9 @@ class Media
     super
   end
 
-  protected
+  #protected
 
   field :_s3_filename, type: String
-
-  def resized_s3_filename
-    "#{self._s3_filename}-240-wide"
-  end
-
-  def bucket
-    s3.buckets['PicShare']
-  end
-
-  def resized_bucket
-    s3.buckets['PicShare-resized']
-  end
-
-  def s3
-    AWS::S3.new(access_key_id: ENV['PICSHARE_AWS_ID'], secret_access_key: ENV['PICSHARE_AWS_SECRET'])
-  end
+  field :_resized_s3_filename, type: String
 
 end

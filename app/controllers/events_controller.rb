@@ -10,6 +10,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @media = @event.medias.where(:_s3_filename.exists => true, :_resized_s3_filename.exists => true)
   end
 
   # GET /events/new

@@ -67,7 +67,7 @@ class PhotosController < ApplicationController
   def upload
     @files = []
     params[:files].each do |file|
-      Photo.new({event_id: params[:event_id], media_file: file.tempfile }).save
+      Photo.create!({event_id: params[:event_id], media_file: file.tempfile })
       @files << { name: file.original_filename }
     end
   end
