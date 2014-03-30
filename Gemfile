@@ -20,6 +20,8 @@ gem 'colorbox-rails'
 gem 'aws-sdk'
 gem 'rmagick', require: 'RMagick'
 
+gem 'sucker_punch'
+
 group :doc do
   gem 'sdoc', require: false
 end
