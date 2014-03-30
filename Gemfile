@@ -24,6 +24,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  gem 'pry-rails'
+end
+
 group :production do
   gem 'unicorn'
   gem 'rails_12factor'
